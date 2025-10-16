@@ -5,7 +5,11 @@ sudo apt install apache2
 sudo apt install mariadb-sever
 sudo mysql_secure_installation
 sudo add-apt-repository ppa:ondrej/php
-udo apt install php8.2 libapache2-mod-php8.2 php8.2-mysql php8.2-curl php8.2-gd php8.2-intl php8.2-zip php8.2-xmlrpc php8.2-soap php8.2-mbstring php8.2-xml
+sudo apt install php8.2 libapache2-mod-php8.2 php8.2-mysql php8.2-curl php8.2-gd php8.2-intl php8.2-zip php8.2-xmlrpc php8.2-soap php8.2-mbstring php8.2-xml
 sudo a2dismod php8.1
+
+wget https://download.moodle.org/download.php/direct/stable403/moodle-latest-403.tgz
+tar -zxvf moodle-latest-403.tgz
+sudo mv moodle /var/www/html/
 
 echo "Script de Instalação finalizado!"

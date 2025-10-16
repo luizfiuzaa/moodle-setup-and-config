@@ -10,17 +10,17 @@ chmod +xw moodle-setup-and-config/scripts/installation.sh
 ```
 
 ### Destalhes
-1. Atualizar o Sistema
+1. **Atualizar o Sistema**
 ```sh
 sudo apt update && sudo apt upgrade
 ```
 
-2. Instalação do Apache
+2. **Instalação do Apache**
 ```sh
 sudo apt install apache2
 ```
 
-3. Instalação de MariaDB
+3. **Instalação de MariaDB**
 ```sh
 sudo apt install mariadb-sever
 ```
@@ -32,7 +32,7 @@ sudo mysql_secure_installation
 ```
 
 
-4. Instalando o PHP e extensões
+4. **Instalando o PHP e extensões**
 ```sh
 sudo add-apt-repository ppa:ondrej/php
 ```
@@ -45,7 +45,7 @@ sudo apt install php8.2 libapache2-mod-php8.2 php8.2-mysql php8.2-curl php8.2-gd
 sudo a2dismod php8.1
 ```
 
-5. Instalação do Moodle
+5. **Instalação do Moodle**
 ```sh
 wget https://download.moodle.org/download.php/direct/stable403/moodle-latest-403.tgz
 ```
@@ -65,17 +65,17 @@ sudo mv moodle /var/www/html/
 ## Incialização e Configuração
 
 ### Banco de Dados
-1. Acessar o MariaDB + senha do usuário
+1. **Acessar o MariaDB + senha do usuário**
 ```sh
 sudo mysql -u root -p
 ```
 
-2. Criar Banco de Dados
+2. **Criar Banco de Dados**
 ```sql
 CREATE DATABASE moodle DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
-3. Criando user e permissões
+3. **Criando user e permissões**
 ```sql
 CREATE USER 'luiz'@'localhost' IDENTIFIED BY '1234';
 GRANT ALL PRIVILEGES ON moodle.* TO 'luiz'@'localhost';
@@ -84,33 +84,39 @@ EXIT;
 ```
 
 ### Moodle
-1. Ajustando permissões dos arquivos
+1. **Ajustando permissões dos arquivos**
 ```sh
 sudo chown -R www-data:www-data /var/www/html/moodle
 sudo chmod -R 755 /var/www/html/moodle
 ```
 
-2. Criando diretório de dados do Moodle (``moodledata``)
+2. **Criando diretório de dados do Moodle (``moodledata``)**
 ```sh
 sudo mkdir /var/www/moodledata
 sudo chown -R www-data:www-data /var/www/moodledata
 ```
 
 ## Instalador WEB Moodle
-1. Acesse ``http://localhost/moodle``;
+1. **Acesse:** ``http://localhost/moodle``;
 
-2. Configure Idioma;
+2. **Configure Idioma**;
 
-3. Caminho para o diretório de dados (``/var/www/moodledata``)
+3. **Caminho para o diretório de dados** (``/var/www/moodledata``)
 
-4. Driver do BD: Selecionar MariaDB(nativo/msqli)
+4. **Driver do BD: Selecionar** MariaDB(nativo/msqli)
 
-5. Configurando BD:
+5. **Configurando BD:**
 -	user: luiz
 -	senha: 1234
 
-6. Criar conta de ADMIN
 
-7. Fornecer um nome para o site do Moodle e + informações
+6. **Criar conta de ADMIN**
+
+7. **Fornecer um nome para o site do Moodle e + informações**
 
 8. Acessar o Moodle em: ``http://localhost/moodle``
+
+## Corrigindo Verificações
+- **``max_input_vars``**: 
+
+- **``site not https``**:

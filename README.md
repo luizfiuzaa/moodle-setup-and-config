@@ -1,6 +1,15 @@
 # Setup Moodle + ZorinOS
+## Instalações
 Para setup do Moodle no ZorinOS, é necessário realizar os seguintes passos:
 
+### Script de Instalação
+Dê a permissão na máquina para o arquivo ``installation.sh``
+
+```sh
+chmod +xw moodle-setup-and-config/scripts/installation.sh
+```
+
+### Destalhes
 1. Atualizar o Sistema
 ```sh
 sudo apt update && sudo apt upgrade
@@ -25,6 +34,14 @@ sudo mysql_secure_installation
 
 4. Instalando o PHP e extensões
 ```sh
-sudo apt install php libapache2-mod-php php-mysql php-curl php-gd php-intl php-zip php-xmlrpc php-soap php-mbstring php-xml
+sudo add-apt-repository ppa:ondrej/php
+```
+
+```sh
+sudo apt install php8.2 libapache2-mod-php8.2 php8.2-mysql php8.2-curl php8.2-gd php8.2-intl php8.2-zip php8.2-xmlrpc php8.2-soap php8.2-mbstring php8.2-xml
+```
+
+```sh
+sudo a2dismod php8.1
 ```
 

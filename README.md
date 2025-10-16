@@ -99,4 +99,18 @@ sudo chown -R www-data:www-data /var/www/moodledata
 ## Instalador WEB Moodle
 1. Acesse ``http://localhost/moodle``;
 
-2. 
+2. Configure Idioma;
+
+3. Caminho para o diretório de dados (``/var/www/moodledata``)
+
+4. Driver do BD: Selecionar MariaDB(nativo/msqli)
+
+5. Configurando BD:
+-	user: luiz
+-	senha: 1234
+
+6. Criar conta de ADMIN
+
+7. Fornecer um nome para o site do Moodle e + informações
+
+8. Acessar o Moodle em: ``http://localhost/moodle``

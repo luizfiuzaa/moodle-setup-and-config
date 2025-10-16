@@ -1,1 +1,1 @@
-# moodle-setup-and-config
+# Setup Moodle + ZorinOS

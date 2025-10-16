@@ -60,8 +60,6 @@ Mover os arquivos para o diretório do servidor WEB
 sudo mv moodle /var/www/html/
 ```
 
-
-
 ## Incialização e Configuração
 
 ### Banco de Dados
@@ -101,7 +99,7 @@ sudo chown -R www-data:www-data /var/www/moodledata
 
 2. **Configure Idioma**;
 
-3. **Caminho para o diretório de dados** (``/var/www/moodledata``)
+3. **Caminho para o diretório de dados** ``/var/www/moodledata``
 
 4. **Driver do BD: Selecionar** MariaDB(nativo/msqli)
 

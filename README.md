@@ -22,7 +22,7 @@ sudo apt install apache2
 
 3. **Instalação de MariaDB**
 ```sh
-sudo apt install mariadb-sever
+sudo apt install mariadb-server
 ```
 
 É recomendado executar, também, o script de segurança:
